@@ -13,30 +13,29 @@
     android:layout_height="match_parent">
 
         <ImageView
-        android:id="@+id/shadow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/shadow"
-        tools:ignore="ContentDescription,ImageContrastCheck" />
+            android:id="@+id/shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.8"
+            app:srcCompat="@drawable/shadow"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
 
-    <ImageView
-        android:id="@+id/mystery_egg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/shadow"
-        app:layout_constraintEnd_toEndOf="@+id/shadow"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/shadow"
-        app:layout_constraintTop_toTopOf="@+id/shadow"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/mystery_egg"
-        tools:ignore="ContentDescription" />
+        <ImageView
+            android:id="@+id/mystery_egg_id"
+            android:layout_width="187dp"
+            android:layout_height="233dp"
+            android:layout_marginBottom="90dp"
+            app:layout_constraintBottom_toBottomOf="@+id/shadow"
+            app:layout_constraintEnd_toEndOf="@+id/shadow"
+            app:layout_constraintStart_toStartOf="@+id/shadow"
+            app:srcCompat="@drawable/mystery_egg"
+            tools:ignore="ContentDescription" />
 
-    <ImageView
+        <ImageView
         android:id="@+id/logOut"
         android:layout_width="40dp"
         android:layout_height="40dp"

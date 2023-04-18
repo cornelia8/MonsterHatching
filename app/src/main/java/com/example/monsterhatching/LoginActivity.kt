@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 
@@ -36,6 +37,13 @@ class LoginActivity : AppCompatActivity() {
                 startIntent.putExtra("username", username)
                 startActivity(startIntent)
             }
+        }
+
+        val quit = findViewById<ImageView>(R.id.quit)
+
+        quit.setOnClickListener {
+            finishAffinity() // Close all activities
+            System.exit(0) // Close the app
         }
 
     }

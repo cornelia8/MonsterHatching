@@ -10,7 +10,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
-import com.example.monsterhatching.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -38,6 +37,30 @@ class MainActivity : AppCompatActivity() {
         val headerView = navigationView.getHeaderView(0)
         val usernameNavTextView : TextView = headerView.findViewById<TextView>(R.id.nav_username)
         usernameNavTextView.text = String.format(getString(R.string.display_username), username)
+
+        // animate egg
+        val egg : ImageView = findViewById(R.id.mystery_egg_id)
+        egg.setOnClickListener {
+            // Set pivot point
+            egg.pivotX = egg.width / 2f
+            egg.pivotY = egg.height.toFloat()
+
+            // Rotate left
+            egg.rotation = 0f
+            egg.animate().rotation(15f).setDuration(250)
+                .withEndAction {
+                    // Rotate right
+                    egg.rotation = 15f
+                    egg.animate().rotation(-10f).setDuration(500)
+                        .withEndAction {
+                            // Return to natural position
+                            egg.rotation = -10f
+                            egg.animate().rotation(0f).setDuration(200).withEndAction {
+                                egg.rotation = 0f
+                            }
+                        }
+                }
+        }
 
         // log out
         val logOutCue: ImageView = findViewById(R.id.logOut)
