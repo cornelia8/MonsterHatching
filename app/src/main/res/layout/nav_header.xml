@@ -27,7 +27,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="casual"
-        android:gravity="center"
         android:text="@string/display_username"
         android:textColor="@color/off_white"
         android:textSize="24sp"
@@ -38,5 +37,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.503" />
 
+    <ImageView
+        android:id="@+id/menu_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="start"
+        android:src="@drawable/baseline_keyboard_double_arrow_right_24"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

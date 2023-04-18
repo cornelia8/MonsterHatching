@@ -34,9 +34,6 @@ class MainActivity : AppCompatActivity() {
         val startIntent = intent
         val username = startIntent.getStringExtra("username")
 
-        val usernameTextView : TextView = findViewById(R.id.user_name)
-        usernameTextView.text = String.format(getString(R.string.display_username), username)
-
         val navigationView = findViewById<NavigationView>(R.id.navView)
         val headerView = navigationView.getHeaderView(0)
         val usernameNavTextView : TextView = headerView.findViewById<TextView>(R.id.nav_username)
